@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>New item</key>
+	<string></string>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>745245391648-4k1rn2c0pahf3jivp1b58bpoft7p17bb.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.745245391648-4k1rn2c0pahf3jivp1b58bpoft7p17bb</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBO7j5MjX3Z0iKS5LM9j-TUsyTPHAC4yMs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>745245391648</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.dorianamouroux.levelup</string>
+	<key>PROJECT_ID</key>
+	<string>levelup-openclassrooms</string>
+	<key>STORAGE_BUCKET</key>
+	<string>levelup-openclassrooms.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:745245391648:ios:27f949a271701f7a</string>
+	<key>DATABASE_URL</key>
+	<string>https://levelup-openclassrooms.firebaseio.com</string>
+</dict>
+</plist>

@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F07FEE0B364B8464D5DEA80 /* Pods_levelup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611F0872CD7E1671EC0A0E0E /* Pods_levelup.framework */; };
 		58AE7DC5200BF1E700259273 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AE7DC4200BF1E700259273 /* AppDelegate.swift */; };
-		58AE7DC7200BF1E700259273 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AE7DC6200BF1E700259273 /* ViewController.swift */; };
+		58AE7DC7200BF1E700259273 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AE7DC6200BF1E700259273 /* HomeViewController.swift */; };
 		58AE7DCA200BF1E700259273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58AE7DC8200BF1E700259273 /* Main.storyboard */; };
 		58AE7DCC200BF1E700259273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58AE7DCB200BF1E700259273 /* Assets.xcassets */; };
 		58AE7DCF200BF1E700259273 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58AE7DCD200BF1E700259273 /* LaunchScreen.storyboard */; };
+		58FAA08A2019F87C00321916 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58FAA0892019F87C00321916 /* GoogleService-Info.plist */; };
+		58FAA08C201A02EF00321916 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAA08B201A02EF00321916 /* LoginViewController.swift */; };
+		58FAA08E201A21D300321916 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAA08D201A21D300321916 /* MenuViewController.swift */; };
+		58FAA090201A2A9300321916 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAA08F201A2A9300321916 /* ProfilePageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		58AE7DC1200BF1E700259273 /* levelup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = levelup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58AE7DC4200BF1E700259273 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		58AE7DC6200BF1E700259273 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		58AE7DC6200BF1E700259273 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		58AE7DC9200BF1E700259273 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58AE7DCB200BF1E700259273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58AE7DCE200BF1E700259273 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58AE7DD0200BF1E700259273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58FAA0892019F87C00321916 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		58FAA08B201A02EF00321916 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		58FAA08D201A21D300321916 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		58FAA08F201A2A9300321916 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
+		611F0872CD7E1671EC0A0E0E /* Pods_levelup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_levelup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D806286E31C0B2BEE17AFA68 /* Pods-levelup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-levelup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-levelup/Pods-levelup.debug.xcconfig"; sourceTree = "<group>"; };
+		F21AD8C8B20572A59D3E0E9E /* Pods-levelup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-levelup.release.xcconfig"; path = "Pods/Target Support Files/Pods-levelup/Pods-levelup.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F07FEE0B364B8464D5DEA80 /* Pods_levelup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48AE41822CE2E974D03B80E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				611F0872CD7E1671EC0A0E0E /* Pods_levelup.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		58AE7DB8200BF1E700259273 = {
 			isa = PBXGroup;
 			children = (
 				58AE7DC3200BF1E700259273 /* levelup */,
 				58AE7DC2200BF1E700259273 /* Products */,
+				8C31C3598CADD3189E3ECB2E /* Pods */,
+				48AE41822CE2E974D03B80E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +77,59 @@
 		58AE7DC3200BF1E700259273 /* levelup */ = {
 			isa = PBXGroup;
 			children = (
-				58AE7DC4200BF1E700259273 /* AppDelegate.swift */,
-				58AE7DC6200BF1E700259273 /* ViewController.swift */,
-				58AE7DC8200BF1E700259273 /* Main.storyboard */,
-				58AE7DCB200BF1E700259273 /* Assets.xcassets */,
-				58AE7DCD200BF1E700259273 /* LaunchScreen.storyboard */,
-				58AE7DD0200BF1E700259273 /* Info.plist */,
+				58FAA0872019F3CE00321916 /* Model */,
+				58FAA0862019F3B300321916 /* Controller */,
+				58FAA0852019F3A800321916 /* View */,
+				58FAA0882019F42000321916 /* Supporting files */,
 			);
 			path = levelup;
+			sourceTree = "<group>";
+		};
+		58FAA0852019F3A800321916 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				58AE7DCD200BF1E700259273 /* LaunchScreen.storyboard */,
+				58AE7DC8200BF1E700259273 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		58FAA0862019F3B300321916 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				58AE7DC6200BF1E700259273 /* HomeViewController.swift */,
+				58FAA08B201A02EF00321916 /* LoginViewController.swift */,
+				58FAA08D201A21D300321916 /* MenuViewController.swift */,
+				58FAA08F201A2A9300321916 /* ProfilePageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		58FAA0872019F3CE00321916 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		58FAA0882019F42000321916 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				58FAA0892019F87C00321916 /* GoogleService-Info.plist */,
+				58AE7DC4200BF1E700259273 /* AppDelegate.swift */,
+				58AE7DCB200BF1E700259273 /* Assets.xcassets */,
+				58AE7DD0200BF1E700259273 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		8C31C3598CADD3189E3ECB2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D806286E31C0B2BEE17AFA68 /* Pods-levelup.debug.xcconfig */,
+				F21AD8C8B20572A59D3E0E9E /* Pods-levelup.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +139,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58AE7DD3200BF1E700259273 /* Build configuration list for PBXNativeTarget "levelup" */;
 			buildPhases = (
+				8B03A80BB8318585D7A9FA16 /* [CP] Check Pods Manifest.lock */,
 				58AE7DBD200BF1E700259273 /* Sources */,
 				58AE7DBE200BF1E700259273 /* Frameworks */,
 				58AE7DBF200BF1E700259273 /* Resources */,
+				83B39D00C9591F6F8A80498B /* [CP] Embed Pods Frameworks */,
+				A35766D21449B326AF1FE6B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,18 +197,107 @@
 				58AE7DCF200BF1E700259273 /* LaunchScreen.storyboard in Resources */,
 				58AE7DCC200BF1E700259273 /* Assets.xcassets in Resources */,
 				58AE7DCA200BF1E700259273 /* Main.storyboard in Resources */,
+				58FAA08A2019F87C00321916 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		83B39D00C9591F6F8A80498B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-levelup/Pods-levelup-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-levelup/Pods-levelup-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B03A80BB8318585D7A9FA16 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-levelup-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A35766D21449B326AF1FE6B7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-levelup/Pods-levelup-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-levelup/Pods-levelup-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58AE7DBD200BF1E700259273 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58AE7DC7200BF1E700259273 /* ViewController.swift in Sources */,
+				58FAA090201A2A9300321916 /* ProfilePageViewController.swift in Sources */,
+				58FAA08C201A02EF00321916 /* LoginViewController.swift in Sources */,
+				58AE7DC7200BF1E700259273 /* HomeViewController.swift in Sources */,
 				58AE7DC5200BF1E700259273 /* AppDelegate.swift in Sources */,
+				58FAA08E201A21D300321916 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,29 +432,33 @@
 		};
 		58AE7DD4200BF1E700259273 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D806286E31C0B2BEE17AFA68 /* Pods-levelup.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = levelup/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/levelup/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dorianamouroux.levelup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		58AE7DD5200BF1E700259273 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F21AD8C8B20572A59D3E0E9E /* Pods-levelup.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = levelup/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/levelup/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dorianamouroux.levelup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
