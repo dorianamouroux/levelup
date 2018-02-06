@@ -41,8 +41,6 @@ class ProfilePageViewController: UIViewController, GIDSignInUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
-        self.title = "Profile"
         GIDSignIn.sharedInstance().uiDelegate = self
     }
     

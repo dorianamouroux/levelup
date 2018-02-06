@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F07FEE0B364B8464D5DEA80 /* Pods_levelup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611F0872CD7E1671EC0A0E0E /* Pods_levelup.framework */; };
+		58354D36202A6340008C3152 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58354D35202A6340008C3152 /* UserViewController.swift */; };
 		58AE7DC5200BF1E700259273 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AE7DC4200BF1E700259273 /* AppDelegate.swift */; };
 		58AE7DC7200BF1E700259273 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AE7DC6200BF1E700259273 /* HomeViewController.swift */; };
 		58AE7DCA200BF1E700259273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58AE7DC8200BF1E700259273 /* Main.storyboard */; };
@@ -15,11 +16,11 @@
 		58AE7DCF200BF1E700259273 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58AE7DCD200BF1E700259273 /* LaunchScreen.storyboard */; };
 		58FAA08A2019F87C00321916 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58FAA0892019F87C00321916 /* GoogleService-Info.plist */; };
 		58FAA08C201A02EF00321916 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAA08B201A02EF00321916 /* LoginViewController.swift */; };
-		58FAA08E201A21D300321916 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAA08D201A21D300321916 /* MenuViewController.swift */; };
 		58FAA090201A2A9300321916 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAA08F201A2A9300321916 /* ProfilePageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58354D35202A6340008C3152 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		58AE7DC1200BF1E700259273 /* levelup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = levelup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58AE7DC4200BF1E700259273 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58AE7DC6200BF1E700259273 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -29,7 +30,6 @@
 		58AE7DD0200BF1E700259273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58FAA0892019F87C00321916 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		58FAA08B201A02EF00321916 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		58FAA08D201A21D300321916 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		58FAA08F201A2A9300321916 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
 		611F0872CD7E1671EC0A0E0E /* Pods_levelup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_levelup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D806286E31C0B2BEE17AFA68 /* Pods-levelup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-levelup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-levelup/Pods-levelup.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,8 +99,8 @@
 			children = (
 				58AE7DC6200BF1E700259273 /* HomeViewController.swift */,
 				58FAA08B201A02EF00321916 /* LoginViewController.swift */,
-				58FAA08D201A21D300321916 /* MenuViewController.swift */,
 				58FAA08F201A2A9300321916 /* ProfilePageViewController.swift */,
+				58354D35202A6340008C3152 /* UserViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -294,10 +294,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				58FAA090201A2A9300321916 /* ProfilePageViewController.swift in Sources */,
+				58354D36202A6340008C3152 /* UserViewController.swift in Sources */,
 				58FAA08C201A02EF00321916 /* LoginViewController.swift in Sources */,
 				58AE7DC7200BF1E700259273 /* HomeViewController.swift in Sources */,
 				58AE7DC5200BF1E700259273 /* AppDelegate.swift in Sources */,
-				58FAA08E201A21D300321916 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
