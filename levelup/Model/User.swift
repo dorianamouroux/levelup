@@ -14,20 +14,42 @@ enum Status {
 }
 
 class CustomUser {
-    var handle: NSObjectProtocol?
-    var status:Status = .visitor
+    // class scope
+    private var handle: NSObjectProtocol?
+    
+    // singleton
     static let instance = CustomUser()
+    
+    // user information
+    var status:Status = .visitor
+    var uid:String = ""
+    var email:String?
+    var photoURL:URL?
     
     init() {
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
             if user != nil {
                 self.status = .user
+                self.userIsSignedIn(user!)
             }
             else {
                 self.status = .visitor
             }
             self.sendNotification("AuthChanged")
         }
+    }
+    
+    deinit {
+        Auth.auth().removeStateDidChangeListener(handle!)
+    }
+    
+    func userIsSignedIn(_ user: User) {
+        uid = user.uid
+        email = user.email
+        photoURL = user.photoURL
+        print(uid)
+        print(email!)
+        print(photoURL!)
     }
     
     func sendNotification(_ rawName:String) {
