@@ -7,29 +7,33 @@
 //
 
 import UIKit
-import Firebase
-import GoogleSignIn
 
 
-class UserViewController: UINavigationController, GIDSignInUIDelegate {
+class UserViewController: UINavigationController {
     var handle: NSObjectProtocol?
+    
+    @objc func userStatusLoaded() {
+        var identifier: String
+        let user = CustomUser.instance
+
+        if user.status == .user {
+            identifier = "profileView"
+        }
+        else {
+            identifier = "loginView"
+        }
+        let vc:UIViewController = storyboard?.instantiateViewController(withIdentifier: identifier) as! UIViewController
+        setViewControllers([vc], animated: false)
+    }
     
     override func viewWillAppear(_ animated:Bool) {
         super.viewWillAppear(animated)
 
-        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-            var identifier: String
-            if user != nil {
-                identifier = "profileView"
-            }
-            else {
-                identifier = "loginView"
-            }
-            let vc : UIViewController? = self.storyboard?.instantiateViewController(withIdentifier: identifier) as? UIViewController
-            if let view = vc {
-                self.setViewControllers([view], animated: false)
-            }
-        }
+        let name = Notification.Name(rawValue: "AuthChanged")
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(userStatusLoaded),
+            name: name, object: nil
+        )
     }
     
     override func viewDidLoad() {

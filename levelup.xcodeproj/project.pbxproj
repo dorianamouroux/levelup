@@ -14,6 +14,7 @@
 		58AE7DCA200BF1E700259273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58AE7DC8200BF1E700259273 /* Main.storyboard */; };
 		58AE7DCC200BF1E700259273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58AE7DCB200BF1E700259273 /* Assets.xcassets */; };
 		58AE7DCF200BF1E700259273 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58AE7DCD200BF1E700259273 /* LaunchScreen.storyboard */; };
+		58EC574F202B903A00141957 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC574E202B903A00141957 /* User.swift */; };
 		58FAA08A2019F87C00321916 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58FAA0892019F87C00321916 /* GoogleService-Info.plist */; };
 		58FAA08C201A02EF00321916 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAA08B201A02EF00321916 /* LoginViewController.swift */; };
 		58FAA090201A2A9300321916 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAA08F201A2A9300321916 /* ProfilePageViewController.swift */; };
@@ -28,6 +29,7 @@
 		58AE7DCB200BF1E700259273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58AE7DCE200BF1E700259273 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58AE7DD0200BF1E700259273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58EC574E202B903A00141957 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = levelup/Model/User.swift; sourceTree = SOURCE_ROOT; };
 		58FAA0892019F87C00321916 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		58FAA08B201A02EF00321916 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		58FAA08F201A2A9300321916 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
@@ -99,8 +101,8 @@
 			children = (
 				58AE7DC6200BF1E700259273 /* HomeViewController.swift */,
 				58FAA08B201A02EF00321916 /* LoginViewController.swift */,
-				58FAA08F201A2A9300321916 /* ProfilePageViewController.swift */,
 				58354D35202A6340008C3152 /* UserViewController.swift */,
+				58FAA08F201A2A9300321916 /* ProfilePageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -108,6 +110,7 @@
 		58FAA0872019F3CE00321916 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				58EC574E202B903A00141957 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			files = (
 				58FAA090201A2A9300321916 /* ProfilePageViewController.swift in Sources */,
 				58354D36202A6340008C3152 /* UserViewController.swift in Sources */,
+				58EC574F202B903A00141957 /* User.swift in Sources */,
 				58FAA08C201A02EF00321916 /* LoginViewController.swift in Sources */,
 				58AE7DC7200BF1E700259273 /* HomeViewController.swift in Sources */,
 				58AE7DC5200BF1E700259273 /* AppDelegate.swift in Sources */,
