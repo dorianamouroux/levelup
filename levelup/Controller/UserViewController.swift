@@ -28,7 +28,6 @@ class UserViewController: UINavigationController {
     
     override func viewWillAppear(_ animated:Bool) {
         super.viewWillAppear(animated)
-
         let name = Notification.Name(rawValue: "AuthChanged")
         NotificationCenter.default.addObserver(
             self, selector: #selector(userStatusLoaded),

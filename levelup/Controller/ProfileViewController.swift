@@ -10,9 +10,7 @@ import UIKit
 import Firebase
 
 
-class ProfilePageViewController: UIViewController {
-    var handle: NSObjectProtocol?
-
+class ProfileViewController: UIViewController {
     
     @IBAction func logout(_ sender: Any) {
         do {
@@ -22,10 +20,29 @@ class ProfilePageViewController: UIViewController {
         }
         
     }
+    
+    override func viewWillAppear(_ animated:Bool) {
+        super.viewWillAppear(animated)
+        let button = UIBarButtonItem(title: "Sign out", style: .done, target: self, action: #selector(logoutMenu))
+        //        navigationItem.rightBarButtonItems = [button]
+        navigationItem.rightBarButtonItem = button
+        print(navigationItem.rightBarButtonItem)
+    }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        let button = UIBarButtonItem(title: "Sign out", style: .done, target: self, action: #selector(logoutMenu))
+////        navigationItem.rightBarButtonItems = [button]
+//        navigationItem.setRightBarButton(button, animated: false)
+    }
+    
+    @objc func logoutMenu() {
+        do {
+            try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
     }
     
     override func didReceiveMemoryWarning() {

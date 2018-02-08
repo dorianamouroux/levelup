@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-983" y="29"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="4xZ-xh-EXr">
             <objects>
-                <navigationController id="5Nl-ax-SUi" customClass="UserViewController" customModule="levelup" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController title="Profile" id="5Nl-ax-SUi" customClass="UserViewController" customModule="levelup" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="pOv-ea-5tk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="maN-BB-2BE">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -73,7 +73,7 @@
         <!--Item-->
         <scene sceneID="rb1-KW-nt7">
             <objects>
-                <viewController storyboardIdentifier="profileView" id="eyW-GS-lQp" customClass="ProfilePageViewController" customModule="levelup" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileView" id="eyW-GS-lQp" customClass="ProfileViewController" customModule="levelup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Czb-39-7gJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="1858" y="891"/>
         </scene>
-        <!--Item 1-->
+        <!--Home-->
         <scene sceneID="RvN-DE-hvX">
             <objects>
-                <viewController id="WkN-dP-tGc" customClass="HomeViewController" customModule="levelup" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="WkN-dP-tGc" customClass="HomeViewController" customModule="levelup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DuP-Wa-6fe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
