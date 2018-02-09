@@ -13,16 +13,9 @@ class UserViewController: UINavigationController {
     var handle: NSObjectProtocol?
     
     @objc func userStatusLoaded() {
-        var identifier: String
         let user = CustomUser.instance
-
-        if user.status == .user {
-            identifier = "profileView"
-        }
-        else {
-            identifier = "loginView"
-        }
-        let vc:UIViewController = storyboard?.instantiateViewController(withIdentifier: identifier) as! UIViewController
+        let identifier = user.status == .user ? "profileView" : "loginView" // choose the right VC
+        let vc:UIViewController = storyboard!.instantiateViewController(withIdentifier: identifier)
         setViewControllers([vc], animated: false)
     }
     
@@ -33,6 +26,7 @@ class UserViewController: UINavigationController {
             self, selector: #selector(userStatusLoaded),
             name: name, object: nil
         )
+        userStatusLoaded()
     }
     
     override func viewDidLoad() {

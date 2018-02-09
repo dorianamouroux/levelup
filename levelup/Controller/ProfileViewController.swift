@@ -11,32 +11,29 @@ import Firebase
 
 
 class ProfileViewController: UIViewController {
-    
-    @IBAction func logout(_ sender: Any) {
-        do {
-            try Auth.auth().signOut()
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
-        }
-        
-    }
-    
+
+    weak var refNavigationItem: UINavigationItem?
+
     override func viewWillAppear(_ animated:Bool) {
         super.viewWillAppear(animated)
+        
+        refNavigationItem = tabBarController!.navigationItem
+
         let button = UIBarButtonItem(title: "Sign out", style: .done, target: self, action: #selector(logoutMenu))
-        //        navigationItem.rightBarButtonItems = [button]
-        navigationItem.rightBarButtonItem = button
-        print(navigationItem.rightBarButtonItem)
+        refNavigationItem?.rightBarButtonItem = button
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        refNavigationItem?.rightBarButtonItem = nil
     }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let button = UIBarButtonItem(title: "Sign out", style: .done, target: self, action: #selector(logoutMenu))
-////        navigationItem.rightBarButtonItems = [button]
-//        navigationItem.setRightBarButton(button, animated: false)
     }
-    
+
     @objc func logoutMenu() {
         do {
             try Auth.auth().signOut()
