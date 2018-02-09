@@ -8,11 +8,17 @@
 
 import UIKit
 import Firebase
-
+import Kingfisher
 
 class ProfileViewController: UIViewController {
 
+    // refs
     weak var refNavigationItem: UINavigationItem?
+    weak var user: CustomUser?
+    
+    // outlet
+    @IBOutlet weak var userPictureView: UIImageView!
+    @IBOutlet weak var userNameView: UILabel!
 
     override func viewWillAppear(_ animated:Bool) {
         super.viewWillAppear(animated)
@@ -21,6 +27,14 @@ class ProfileViewController: UIViewController {
 
         let button = UIBarButtonItem(title: "Sign out", style: .done, target: self, action: #selector(logoutMenu))
         refNavigationItem?.rightBarButtonItem = button
+        
+        if let displayName = user?.displayName {
+            userNameView.text = "Hi \(displayName)"
+        }
+
+        if let photoUrl = user?.photoURL {
+            userPictureView.kf.setImage(with: photoUrl)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -28,10 +42,11 @@ class ProfileViewController: UIViewController {
         
         refNavigationItem?.rightBarButtonItem = nil
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        user = CustomUser.instance
     }
 
     @objc func logoutMenu() {

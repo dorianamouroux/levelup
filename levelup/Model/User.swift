@@ -22,7 +22,8 @@ class CustomUser {
     
     // user information
     var status:Status = .visitor
-    var uid:String = ""
+    var uid = ""
+    var displayName:String?
     var email:String?
     var photoURL:URL?
     
@@ -47,9 +48,7 @@ class CustomUser {
         uid = user.uid
         email = user.email
         photoURL = user.photoURL
-        print(uid)
-        print(email!)
-        print(photoURL!)
+        displayName = user.displayName
     }
     
     func sendNotification(_ rawName:String) {
