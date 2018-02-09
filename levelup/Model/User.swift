@@ -57,4 +57,13 @@ class CustomUser {
         let notification = Notification(name: name)
         NotificationCenter.default.post(notification)
     }
+
+    func onChange(context: Any, callback:Selector) {
+        let name = Notification.Name(rawValue: "AuthChanged")
+        NotificationCenter.default.addObserver(context, selector: callback, name: name, object: nil)
+    }
+    
+    func removeOnChange(context: Any) {
+        NotificationCenter.default.removeObserver(context)
+    }
 }

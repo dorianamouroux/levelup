@@ -21,12 +21,15 @@ class UserViewController: UINavigationController {
     
     override func viewWillAppear(_ animated:Bool) {
         super.viewWillAppear(animated)
-        let name = Notification.Name(rawValue: "AuthChanged")
-        NotificationCenter.default.addObserver(
-            self, selector: #selector(userStatusLoaded),
-            name: name, object: nil
-        )
-        userStatusLoaded()
+        
+        CustomUser.instance.onChange(context: self, callback: #selector(userStatusLoaded))
+        userStatusLoaded() // initial load
+    }
+    
+    override func viewWillDisappear(_ animated:Bool) {
+        super.viewWillDisappear(animated)
+        
+        CustomUser.instance.removeOnChange(context: self)
     }
     
     override func viewDidLoad() {
