@@ -9,28 +9,36 @@
 import UIKit
 
 class HomeViewController: UIViewController, UITableViewDataSource {
-
-    let levelData = LevelManager.getList()
     
     @IBOutlet weak var levelList: UITableView!
 
-    
+    var levelData: [Level]?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
 
         levelList.register(UINib(nibName: "LevelCell", bundle: nil), forCellReuseIdentifier: "test")
         levelList.dataSource = self
+        
+        LevelManager.instance.getList() { (err, levels) in
+            self.levelData = levels
+            self.levelList.reloadData()
+        }
     }
 
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return levelData.count
+        if let data = levelData {
+            return data.count
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "test", for: indexPath) as! LevelTableViewCell
 
-        cell.layout(with: levelData[indexPath.row])
+        cell.layout(with: levelData![indexPath.row])
 
         return cell
     }
