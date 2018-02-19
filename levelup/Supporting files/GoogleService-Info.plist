@@ -2,41 +2,39 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>New item</key>
-	<string></string>
 	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
 	<string>ca-app-pub-3940256099942544/2934735716</string>
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>745245391648-4k1rn2c0pahf3jivp1b58bpoft7p17bb.apps.googleusercontent.com</string>
+	<string>762404774332-osdp9veer5ufmimo2inldgi58ub68gcg.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.745245391648-4k1rn2c0pahf3jivp1b58bpoft7p17bb</string>
+	<string>com.googleusercontent.apps.762404774332-osdp9veer5ufmimo2inldgi58ub68gcg</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBO7j5MjX3Z0iKS5LM9j-TUsyTPHAC4yMs</string>
+	<string>AIzaSyA98snhvlD66mARbHhFjQNQg88t-IUAH3A</string>
 	<key>GCM_SENDER_ID</key>
-	<string>745245391648</string>
+	<string>762404774332</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.dorianamouroux.levelup</string>
 	<key>PROJECT_ID</key>
-	<string>levelup-openclassrooms</string>
+	<string>levelup-a6c6b</string>
 	<key>STORAGE_BUCKET</key>
-	<string>levelup-openclassrooms.appspot.com</string>
+	<string>levelup-a6c6b.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:745245391648:ios:27f949a271701f7a</string>
+	<string>1:762404774332:ios:27f949a271701f7a</string>
 	<key>DATABASE_URL</key>
-	<string>https://levelup-openclassrooms.firebaseio.com</string>
+	<string>https://levelup-a6c6b.firebaseio.com</string>
 </dict>
 </plist>
