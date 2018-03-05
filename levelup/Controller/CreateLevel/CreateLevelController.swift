@@ -15,6 +15,13 @@ class CreateLevelController: UITabBarController {
         selectedIndex = index
     }
     
+    func goToPageTwo(nameValue: String, descriptionValue: String, urlValue: String?) {
+        print(nameValue)
+        print(descriptionValue)
+        print(urlValue as Any)
+        goToPage(1)
+    }
+    
     func finishForm() {
         print("FINISHH")
     }
@@ -22,6 +29,7 @@ class CreateLevelController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tabBarController?.navigationItem.title = "Create Level"
         tabBar.isHidden = true
         // Do any additional setup after loading the view.
     }
