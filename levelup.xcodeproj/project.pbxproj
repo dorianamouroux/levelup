@@ -22,6 +22,10 @@
 		58BC4ADC2035CFB200D64E70 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC4ADB2035CFB200D64E70 /* Level.swift */; };
 		58BC4ADE2035D28000D64E70 /* LevelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC4ADD2035D28000D64E70 /* LevelManager.swift */; };
 		58EC574F202B903A00141957 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC574E202B903A00141957 /* User.swift */; };
+		58EE4CE0204735D4008C0F00 /* CreateLevelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EE4CDF204735D4008C0F00 /* CreateLevelController.swift */; };
+		58EE4CE2204737CF008C0F00 /* PageOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EE4CE1204737CF008C0F00 /* PageOneViewController.swift */; };
+		58EE4CE4204746B9008C0F00 /* PageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EE4CE3204746B9008C0F00 /* PageTwoViewController.swift */; };
+		58EE4CE62047492D008C0F00 /* PageThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EE4CE52047492D008C0F00 /* PageThreeViewController.swift */; };
 		58FAA08C201A02EF00321916 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAA08B201A02EF00321916 /* LoginViewController.swift */; };
 		58FAA090201A2A9300321916 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAA08F201A2A9300321916 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +47,10 @@
 		58BC4ADB2035CFB200D64E70 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		58BC4ADD2035D28000D64E70 /* LevelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelManager.swift; sourceTree = "<group>"; };
 		58EC574E202B903A00141957 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = levelup/Model/User.swift; sourceTree = SOURCE_ROOT; };
+		58EE4CDF204735D4008C0F00 /* CreateLevelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLevelController.swift; sourceTree = "<group>"; };
+		58EE4CE1204737CF008C0F00 /* PageOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOneViewController.swift; sourceTree = "<group>"; };
+		58EE4CE3204746B9008C0F00 /* PageTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTwoViewController.swift; sourceTree = "<group>"; };
+		58EE4CE52047492D008C0F00 /* PageThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageThreeViewController.swift; sourceTree = "<group>"; };
 		58FAA08B201A02EF00321916 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		58FAA08F201A2A9300321916 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		611F0872CD7E1671EC0A0E0E /* Pods_levelup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_levelup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +135,17 @@
 			path = levelup;
 			sourceTree = "<group>";
 		};
+		58EE4CDC20473569008C0F00 /* CreateLevel */ = {
+			isa = PBXGroup;
+			children = (
+				58EE4CDF204735D4008C0F00 /* CreateLevelController.swift */,
+				58EE4CE1204737CF008C0F00 /* PageOneViewController.swift */,
+				58EE4CE3204746B9008C0F00 /* PageTwoViewController.swift */,
+				58EE4CE52047492D008C0F00 /* PageThreeViewController.swift */,
+			);
+			path = CreateLevel;
+			sourceTree = "<group>";
+		};
 		58FAA0852019F3A800321916 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +160,7 @@
 		58FAA0862019F3B300321916 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				58EE4CDC20473569008C0F00 /* CreateLevel */,
 				589CE764203593C700231119 /* HomeTab */,
 				5863D235202E361900553368 /* UserTab */,
 			);
@@ -340,11 +360,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58EE4CE4204746B9008C0F00 /* PageTwoViewController.swift in Sources */,
+				58EE4CE2204737CF008C0F00 /* PageOneViewController.swift in Sources */,
 				58FAA090201A2A9300321916 /* ProfileViewController.swift in Sources */,
 				58354D36202A6340008C3152 /* UserViewController.swift in Sources */,
 				58EC574F202B903A00141957 /* User.swift in Sources */,
 				58FAA08C201A02EF00321916 /* LoginViewController.swift in Sources */,
+				58EE4CE0204735D4008C0F00 /* CreateLevelController.swift in Sources */,
 				5815E221203B69ED00F1EEEB /* LevelTableViewCell.swift in Sources */,
+				58EE4CE62047492D008C0F00 /* PageThreeViewController.swift in Sources */,
 				58BC4ADE2035D28000D64E70 /* LevelManager.swift in Sources */,
 				589CE766203593D900231119 /* HomeViewController.swift in Sources */,
 				58BADA8E203E1555009BC6A6 /* DetailViewController.swift in Sources */,
