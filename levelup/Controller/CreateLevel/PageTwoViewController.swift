@@ -14,7 +14,12 @@ class PageTwoViewController: UIViewController {
     // feature
     var featureList:[String] = [] {
         didSet {
-            featureOutput?.text = "- " + featureList.joined(separator: "\n- ")
+            if featureList.count == 0 {
+                featureOutput?.text = ""
+            }
+            else {
+                featureOutput?.text = "- " + featureList.joined(separator: "\n- ")
+            }
         }
     }
     @IBOutlet weak var featureInput: UITextField!
@@ -24,9 +29,17 @@ class PageTwoViewController: UIViewController {
         if featureValue.count > 0 {
             featureList.append(featureValue)
             featureInput?.text = ""
+            removeButton.isHidden = false
         }
         else {
             errorMessage("You need to write a feature")
+        }
+    }
+    @IBOutlet weak var removeButton: UIButton!
+    @IBAction func removeLastFeature(_ sender: Any) {
+        featureList.removeLast()
+        if featureList.count == 0 {
+            removeButton.isHidden = true
         }
     }
     @IBOutlet weak var featureOutput: UITextView!
@@ -34,7 +47,12 @@ class PageTwoViewController: UIViewController {
     // bonus feature
     var bonusList:[String] = [] {
         didSet {
-            bonusOutput?.text = "- " + bonusList.joined(separator: "\n- ")
+            if bonusList.count == 0 {
+                bonusOutput?.text = ""
+            }
+            else {
+                bonusOutput?.text = "- " + bonusList.joined(separator: "\n- ")
+            }
         }
     }
     @IBOutlet weak var bonusInput: UITextField!
@@ -44,12 +62,20 @@ class PageTwoViewController: UIViewController {
         if featureValue.count > 0 {
             bonusList.append(featureValue)
             bonusInput?.text = ""
+            removeButtonBonus.isHidden = false
         }
         else {
             errorMessage("You need to write a feature")
         }
     }
     @IBOutlet weak var bonusOutput: UITextView!
+    @IBOutlet weak var removeButtonBonus: UIButton!
+    @IBAction func removeLastBonus(_ sender: Any) {
+        bonusList.removeLast()
+        if bonusList.count == 0 {
+            removeButtonBonus.isHidden = true
+        }
+    }
     
     @IBAction func previousPageAction(_ sender: Any) {
 
