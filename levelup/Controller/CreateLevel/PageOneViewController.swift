@@ -48,7 +48,7 @@ class PageOneViewController: UIViewController {
         guard let descriptionValue = descriptionField?.text else { return false }
         
         
-        if nameValue.count > 5 && descriptionValue.count > 5 {
+        if nameValue.count > 0 && descriptionValue.count > 0 {
             return true
         }
         

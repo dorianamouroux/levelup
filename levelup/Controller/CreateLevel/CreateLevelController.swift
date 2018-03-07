@@ -31,7 +31,8 @@ class CreateLevelController: UITabBarController {
 
         tabBarController?.navigationItem.title = "Create Level"
         tabBar.isHidden = true
-        // Do any additional setup after loading the view.
+        
+        goToPage(1)
     }
 
     override func didReceiveMemoryWarning() {
