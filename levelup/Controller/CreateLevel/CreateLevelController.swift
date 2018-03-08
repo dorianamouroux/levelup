@@ -10,20 +10,38 @@ import UIKit
 
 
 class CreateLevelController: UITabBarController {
-    
+    var level = Level()
+
     func goToPage(_ index: Int) {
         selectedIndex = index
     }
     
     func goToPageTwo(nameValue: String, descriptionValue: String, urlValue: String?) {
-        print(nameValue)
-        print(descriptionValue)
-        print(urlValue as Any)
+        level.name = nameValue
+        level.description = descriptionValue
+        if let url = urlValue {
+            level.link = URL(string: url)
+        }
         goToPage(1)
     }
     
-    func finishForm() {
-        print("FINISHH")
+    func goToPageThree(featureList: [String], bonusList: [String]) {
+        level.featureList = featureList
+        level.featureListBonus = bonusList
+        goToPage(2)
+    }
+    
+    func finishForm(
+        difficulty: Int,
+        time: Int,
+        category: Int,
+        platform: Int) {
+        level.difficulty = Difficulty(rawValue: difficulty)
+        level.time = Time(rawValue: time)
+        level.category = Category(rawValue: category)
+        level.platform = Platform(rawValue: platform)
+        
+        LevelManager.instance.addLevelToDb(level: level)
     }
 
     override func viewDidLoad() {
@@ -32,7 +50,7 @@ class CreateLevelController: UITabBarController {
         tabBarController?.navigationItem.title = "Create Level"
         tabBar.isHidden = true
         
-        goToPage(1)
+        goToPage(0)
     }
 
     override func didReceiveMemoryWarning() {

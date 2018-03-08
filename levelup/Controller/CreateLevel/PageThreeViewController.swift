@@ -10,12 +10,12 @@ import UIKit
 
 class PageThreeViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
+    
+    @IBOutlet weak var difficultyInput: UISegmentedControl!
+    @IBOutlet weak var timeInput: UISegmentedControl!
+    @IBOutlet weak var categoryInput: UISegmentedControl!
+    @IBOutlet weak var platformInput: UISegmentedControl!
+    
     @IBAction func previousPageAction(_ sender: Any) {
         if let parent = tabBarController as? CreateLevelController {
             parent.goToPage(1)
@@ -24,24 +24,25 @@ class PageThreeViewController: UIViewController {
     
     @IBAction func nextPageAction(_ sender: Any) {
         if let parent = tabBarController as? CreateLevelController {
-            parent.finishForm()
+            parent.finishForm(
+                difficulty: difficultyInput.selectedSegmentIndex,
+                time: timeInput.selectedSegmentIndex,
+                category: categoryInput.selectedSegmentIndex,
+                platform: platformInput.selectedSegmentIndex
+            )
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

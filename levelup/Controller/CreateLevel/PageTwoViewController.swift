@@ -93,7 +93,7 @@ class PageTwoViewController: UIViewController {
         }
         
         if let parent = tabBarController as? CreateLevelController {
-            parent.goToPage(2)
+            parent.goToPageThree(featureList: featureList, bonusList: bonusList)
         }
     }
     

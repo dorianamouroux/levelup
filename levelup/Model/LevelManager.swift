@@ -24,7 +24,14 @@ class LevelManager {
     func convertToModel(_ rawData:[String : Any]) -> Level {
         return Level(
             name: rawData["name"] as! String,
-            description: "yo"
+            description: "yo",
+            link: URL(string: "http://www.github.com")!,
+            featureList: ["a", "b"],
+            featureListBonus: ["test", "test"],
+            difficulty: Difficulty.advanced,
+            time: Time.short,
+            category: Category.game,
+            platform: Platform.console
         )
     }
     
@@ -43,6 +50,40 @@ class LevelManager {
                 }
             }
             cb(nil, levels)
+        }
+    }
+    
+    func addLevelToDb(level: Level) {
+        let db = Firestore.firestore()
+        let docRef = db.collection("level")
+        
+//        self.name = name
+//        self.description = description
+//        self.link = link
+//        self.featureList = featureList
+//        self.featureListBonus = featureListBonus
+//        self.difficulty = difficulty
+//        self.time = time
+//        self.category = category
+//        self.platform = platform
+        let data: [String: Any] = [
+            "name": level.name,
+            "description": level.description,
+            "link": level.link,
+            "featureList": level.featureList,
+            "featureListBonus": level.featureListBonus,
+            "difficulty": level.difficulty?.rawValue,
+            "time": level.time?.rawValue,
+            "category": level.category?.rawValue,
+            "platform": level.platform?.rawValue,
+            "token": level.uniqueToken
+        ]
+        docRef.addDocument(data: data) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
         }
     }
     
