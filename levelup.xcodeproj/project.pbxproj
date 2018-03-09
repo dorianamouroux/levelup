@@ -21,6 +21,7 @@
 		58BADA8E203E1555009BC6A6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BADA8D203E1555009BC6A6 /* DetailViewController.swift */; };
 		58BC4ADC2035CFB200D64E70 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC4ADB2035CFB200D64E70 /* Level.swift */; };
 		58BC4ADE2035D28000D64E70 /* LevelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC4ADD2035D28000D64E70 /* LevelManager.swift */; };
+		58C72C8120527EFE009E136C /* random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C72C8020527EFE009E136C /* random.swift */; };
 		58EC574F202B903A00141957 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC574E202B903A00141957 /* User.swift */; };
 		58EE4CE0204735D4008C0F00 /* CreateLevelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EE4CDF204735D4008C0F00 /* CreateLevelController.swift */; };
 		58EE4CE2204737CF008C0F00 /* PageOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EE4CE1204737CF008C0F00 /* PageOneViewController.swift */; };
@@ -46,6 +47,7 @@
 		58BADA8D203E1555009BC6A6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		58BC4ADB2035CFB200D64E70 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		58BC4ADD2035D28000D64E70 /* LevelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelManager.swift; sourceTree = "<group>"; };
+		58C72C8020527EFE009E136C /* random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = random.swift; sourceTree = "<group>"; };
 		58EC574E202B903A00141957 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = levelup/Model/User.swift; sourceTree = SOURCE_ROOT; };
 		58EE4CDF204735D4008C0F00 /* CreateLevelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLevelController.swift; sourceTree = "<group>"; };
 		58EE4CE1204737CF008C0F00 /* PageOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOneViewController.swift; sourceTree = "<group>"; };
@@ -127,12 +129,21 @@
 		58AE7DC3200BF1E700259273 /* levelup */ = {
 			isa = PBXGroup;
 			children = (
+				58C72C8220527F03009E136C /* utils */,
 				58FAA0872019F3CE00321916 /* Model */,
 				58FAA0862019F3B300321916 /* Controller */,
 				58FAA0852019F3A800321916 /* View */,
 				58FAA0882019F42000321916 /* Supporting files */,
 			);
 			path = levelup;
+			sourceTree = "<group>";
+		};
+		58C72C8220527F03009E136C /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				58C72C8020527EFE009E136C /* random.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 		58EE4CDC20473569008C0F00 /* CreateLevel */ = {
@@ -363,6 +374,7 @@
 				58EE4CE4204746B9008C0F00 /* PageTwoViewController.swift in Sources */,
 				58EE4CE2204737CF008C0F00 /* PageOneViewController.swift in Sources */,
 				58FAA090201A2A9300321916 /* ProfileViewController.swift in Sources */,
+				58C72C8120527EFE009E136C /* random.swift in Sources */,
 				58354D36202A6340008C3152 /* UserViewController.swift in Sources */,
 				58EC574F202B903A00141957 /* User.swift in Sources */,
 				58FAA08C201A02EF00321916 /* LoginViewController.swift in Sources */,

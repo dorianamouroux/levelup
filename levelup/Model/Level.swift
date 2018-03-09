@@ -60,7 +60,7 @@ class Level {
         self.time = time
         self.category = category
         self.platform = platform
-        self.uniqueToken = "asgdbvasd"
+        self.uniqueToken = randomString(length: 32)
     }
     
 }
