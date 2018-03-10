@@ -20,6 +20,7 @@ class CreateLevelController: UITabBarController {
         level.name = nameValue
         level.description = descriptionValue
         if let url = urlValue {
+            print(url)
             level.link = URL(string: url)
         }
         goToPage(1)

@@ -56,11 +56,11 @@ class LevelManager {
     func addLevelToDb(level: Level) {
         let db = Firestore.firestore()
         let docRef = db.collection("level")
-
+ 
         let data: [String: Any] = [
             "name": level.name as Any,
             "description": level.description as Any,
-            "link": level.link as Any,
+            "link": level.link?.absoluteString as Any,
             "featureList": level.featureList as Any,
             "featureListBonus": level.featureListBonus as Any,
             "difficulty": level.difficulty?.rawValue as Any,

@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var nameView: UILabel!
     @IBOutlet weak var descriptionView: UILabel!
+    @IBOutlet weak var linkView: UILabel!
     @IBOutlet weak var featureListView: UITextView!
     @IBOutlet weak var bonusListView: UITextView!
     @IBOutlet weak var difficultyView: UILabel!
@@ -32,6 +33,13 @@ class DetailViewController: UIViewController {
 
         nameView.text = level.name
         descriptionView.text = level.description
+        
+        if let link = level.link {
+            linkView.text = "\(link)"
+        } else {
+            linkView.text = "No link"
+        }
+        
         featureListView.text = formatFeatureList(list: level.featureList!, emptyValue: "No features")
         bonusListView.text = formatFeatureList(list: level.featureListBonus!, emptyValue: "No bonus features")
         difficultyView.text = displayFromEnum(level.difficulty)
