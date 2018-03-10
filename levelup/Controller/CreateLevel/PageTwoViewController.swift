@@ -14,12 +14,7 @@ class PageTwoViewController: UIViewController {
     // feature
     var featureList:[String] = [] {
         didSet {
-            if featureList.count == 0 {
-                featureOutput?.text = ""
-            }
-            else {
-                featureOutput?.text = "- " + featureList.joined(separator: "\n- ")
-            }
+            featureOutput?.text = formatFeatureList(list: featureList)
         }
     }
     @IBOutlet weak var featureInput: UITextField!
@@ -47,12 +42,7 @@ class PageTwoViewController: UIViewController {
     // bonus feature
     var bonusList:[String] = [] {
         didSet {
-            if bonusList.count == 0 {
-                bonusOutput?.text = ""
-            }
-            else {
-                bonusOutput?.text = "- " + bonusList.joined(separator: "\n- ")
-            }
+            bonusOutput?.text = formatFeatureList(list: bonusList)
         }
     }
     @IBOutlet weak var bonusInput: UITextField!

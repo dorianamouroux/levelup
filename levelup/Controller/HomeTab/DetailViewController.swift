@@ -28,21 +28,20 @@ class DetailViewController: UIViewController {
     }
     
     func displayContent() {
-        nameView.text = data?.name
-        descriptionView.text = data?.description
-        featureListView.text = formatFeatureList(data?.featureList)
-        bonusListView.text = formatFeatureList(data?.featureListBonus)
-        difficultyView.text = displayFromEnum(data?.difficulty)
-        timeView.text = displayFromEnum(data?.time)
-        platformView.text = displayFromEnum(data?.platform)
-        categoryView.text = displayFromEnum(data?.category)
+        guard let level = data else { return }
+
+        nameView.text = level.name
+        descriptionView.text = level.description
+        featureListView.text = formatFeatureList(list: level.featureList!, emptyValue: "No features")
+        bonusListView.text = formatFeatureList(list: level.featureListBonus!, emptyValue: "No bonus features")
+        difficultyView.text = displayFromEnum(level.difficulty)
+        timeView.text = displayFromEnum(level.time)
+        platformView.text = displayFromEnum(level.platform)
+        categoryView.text = displayFromEnum(level.category)
     }
     
     func displayFromEnum(_ data: Any?) -> String {
         return String(describing: (data)!)
     }
-    
-    func formatFeatureList(_ features: [String]?) -> String {
-        return "yo"
-    }
+
 }
