@@ -9,19 +9,19 @@
 import Foundation
 
 enum Difficulty: Int {
-    case beginner, advanced, expert
+    case undefined = -1, beginner, advanced, expert
 }
 
 enum Category: Int {
-    case application, tool, game
+    case undefined = -1, application, tool, game
 }
 
 enum Time: Int {
-    case short, medium, long
+    case undefined = -1, short, medium, long
 }
 
 enum Platform: Int {
-    case mobile, website, desktop, console
+    case undefined = -1, mobile, website, desktop, console
 }
 
 class Level {
@@ -43,9 +43,9 @@ class Level {
     
     init(name: String,
          description: String,
-         link: URL,
+         link: URL?,
          featureList: [String],
-         featureListBonus: [String],
+         featureListBonus: [String]?,
          difficulty: Difficulty,
          time: Time,
          category: Category,
