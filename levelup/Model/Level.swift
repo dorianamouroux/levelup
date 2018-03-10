@@ -38,7 +38,7 @@ class Level {
     var uniqueToken: String
 
     init() {
-        self.uniqueToken = "asgdbvasd"
+        self.uniqueToken = randomString(length: 32)
     }
     
     init(name: String,
