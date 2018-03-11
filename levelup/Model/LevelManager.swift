@@ -53,7 +53,7 @@ class LevelManager {
         }
     }
     
-    func addLevelToDb(level: Level) {
+    func addLevelToDb(level: Level, cb: @escaping (_ err: String?) -> Void) {
         let db = Firestore.firestore()
         let docRef = db.collection("level")
  
@@ -71,9 +71,9 @@ class LevelManager {
         ]
         docRef.addDocument(data: data) { err in
             if let err = err {
-                print("Error writing document: \(err)")
+                cb("\(err)")
             } else {
-                print("Document successfully written!")
+                cb(nil)
             }
         }
     }

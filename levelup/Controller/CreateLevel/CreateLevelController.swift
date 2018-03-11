@@ -42,8 +42,16 @@ class CreateLevelController: UITabBarController {
         level.category = Category(rawValue: category)
         level.platform = Platform(rawValue: platform)
         
-        LevelManager.instance.addLevelToDb(level: level)
-        self.performSegue(withIdentifier: "unwindToDetail", sender: self)
+        LevelManager.instance.addLevelToDb(level: level) { (err) in
+            if let error = err {
+                let alert = UIAlertController(title: "Error", message: error, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+            else {
+                self.performSegue(withIdentifier: "unwindToDetail", sender: self)
+            }
+        }
     }
 
     override func viewDidLoad() {
@@ -63,7 +71,6 @@ class CreateLevelController: UITabBarController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "unwindToDetail") {
             let vc = segue.destination as! DetailViewController;
-            
             vc.data = level
         }
     }
