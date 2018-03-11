@@ -10,6 +10,8 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBAction func unwindToDetail(segue:UIStoryboardSegue) { }
+    
     var data: Level?
     
     @IBOutlet weak var nameView: UILabel!

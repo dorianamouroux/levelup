@@ -43,6 +43,7 @@ class CreateLevelController: UITabBarController {
         level.platform = Platform(rawValue: platform)
         
         LevelManager.instance.addLevelToDb(level: level)
+        self.performSegue(withIdentifier: "unwindToDetail", sender: self)
     }
 
     override func viewDidLoad() {
@@ -57,6 +58,14 @@ class CreateLevelController: UITabBarController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "unwindToDetail") {
+            let vc = segue.destination as! DetailViewController;
+            
+            vc.data = level
+        }
     }
 
 }
