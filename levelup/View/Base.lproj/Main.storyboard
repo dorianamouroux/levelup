@@ -383,12 +383,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9m-l0-rFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1135" y="-304"/>
+            <point key="canvasLocation" x="1193" y="-336"/>
         </scene>
         <!--main-->
         <scene sceneID="Ua2-SU-jtw">
             <objects>
-                <tabBarController title="main" id="PaL-vb-WYs" sceneMemberID="viewController">
+                <tabBarController title="main" id="PaL-vb-WYs" customClass="MainTabBarController" customModule="levelup" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="LevelUp" id="lbE-k5-4kE"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pKr-Xq-rjo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -536,7 +536,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YbE-OC-aSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2349.5999999999999" y="-304.4977511244378"/>
+            <point key="canvasLocation" x="2020" y="-337"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

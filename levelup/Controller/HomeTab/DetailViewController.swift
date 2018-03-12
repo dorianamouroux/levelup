@@ -13,6 +13,7 @@ class DetailViewController: UIViewController {
     @IBAction func unwindToDetail(segue:UIStoryboardSegue) { }
     
     var data: Level?
+    var fetchRandom = false
     
     @IBOutlet weak var nameView: UILabel!
     @IBOutlet weak var descriptionView: UILabel!
@@ -27,7 +28,22 @@ class DetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        displayContent()
+        if fetchRandom == true {
+            LevelManager.instance.getRandomLevel() { (err, level) in
+                self.data = level
+                self.displayContent()
+            }
+        }
+        else {
+            displayContent()
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        data = nil
+        fetchRandom = false
     }
     
     func displayContent() {
@@ -42,8 +58,12 @@ class DetailViewController: UIViewController {
             linkView.text = "No link"
         }
         
-        featureListView.text = formatFeatureList(list: level.featureList!, emptyValue: "No features")
-        bonusListView.text = formatFeatureList(list: level.featureListBonus!, emptyValue: "No bonus features")
+        featureListView.text = formatFeatureList(list: level.featureList, emptyValue: "No features")
+        if let listBonus = level.featureListBonus {
+            bonusListView.text = formatFeatureList(list: listBonus, emptyValue: "No bonus features")
+        } else {
+            bonusListView.text = "No bonus features"
+        }
         difficultyView.text = displayFromEnum(level.difficulty)
         timeView.text = displayFromEnum(level.time)
         platformView.text = displayFromEnum(level.platform)

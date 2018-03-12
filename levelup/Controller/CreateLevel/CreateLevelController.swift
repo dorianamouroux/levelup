@@ -37,10 +37,10 @@ class CreateLevelController: UITabBarController {
         time: Int,
         category: Int,
         platform: Int) {
-        level.difficulty = Difficulty(rawValue: difficulty)
-        level.time = Time(rawValue: time)
-        level.category = Category(rawValue: category)
-        level.platform = Platform(rawValue: platform)
+        level.difficulty = Difficulty(rawValue: difficulty)!
+        level.time = Time(rawValue: time)!
+        level.category = Category(rawValue: category)!
+        level.platform = Platform(rawValue: platform)!
         
         LevelManager.instance.addLevelToDb(level: level) { (err) in
             if let error = err {

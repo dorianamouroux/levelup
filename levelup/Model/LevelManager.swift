@@ -28,11 +28,38 @@ class LevelManager {
             link: URL(string: (rawData["link"] as? String) ?? ""),
             featureList: (rawData["featureList"] as? [String]) ?? [],
             featureListBonus: (rawData["featureListBonus"] as? [String]) ?? [],
+            difficulty: Difficulty(rawValue: (rawData["difficulty"] as? Int) ?? Difficulty.undefined.rawValue)!,
+            time: Time(rawValue: (rawData["time"] as? Int) ?? Time.undefined.rawValue)!,
+            category: Category(rawValue: (rawData["category"] as? Int) ?? Category.undefined.rawValue)!,
+            platform: Platform(rawValue: (rawData["platform"] as? Int) ?? Platform.undefined.rawValue)!
+        )
+    }
+    
+    func getRandomLevel(cb: @escaping (_ err: String?, _ level: Level) -> Void)  {
+        let rawData: [String: Any] = [
+            "name": "Random",
+            "description": "Hey hey random",
+            "link": "",
+            "featureList": ["test 1", "test 2"],
+            "featureListBonus": ["bonus test 1", "bonus test 2"],
+            "difficulty": Difficulty.beginner,
+            "time": Time.medium,
+            "category": Category.game,
+            "platform": Category.application,
+            "token": "234251234",
+        ]
+    
+        cb(nil, Level(
+            name: rawData["name"] as! String,
+            description: (rawData["description"] as? String) ?? "No description",
+            link: URL(string: (rawData["link"] as? String) ?? ""),
+            featureList: (rawData["featureList"] as? [String]) ?? [],
+            featureListBonus: (rawData["featureListBonus"] as? [String]) ?? [],
             difficulty: Difficulty(rawValue: (rawData["difficulty"] as? Int) ?? -1)!,
             time: Time(rawValue: (rawData["time"] as? Int) ?? -1)!,
             category: Category(rawValue: (rawData["category"] as? Int) ?? -1)!,
             platform: Platform(rawValue: (rawData["platform"] as? Int) ?? -1)!
-        )
+        ))
     }
     
     func getList(cb: @escaping (_ err: String?, _ levels: [Level]) -> Void) {
@@ -63,10 +90,10 @@ class LevelManager {
             "link": level.link?.absoluteString as Any,
             "featureList": level.featureList as Any,
             "featureListBonus": level.featureListBonus as Any,
-            "difficulty": level.difficulty?.rawValue as Any,
-            "time": level.time?.rawValue as Any,
-            "category": level.category?.rawValue as Any,
-            "platform": level.platform?.rawValue as Any,
+            "difficulty": level.difficulty.rawValue as Any,
+            "time": level.time.rawValue as Any,
+            "category": level.category.rawValue as Any,
+            "platform": level.platform.rawValue as Any,
             "token": level.uniqueToken
         ]
         docRef.addDocument(data: data) { err in

@@ -26,30 +26,26 @@ enum Platform: Int {
 
 class Level {
 
-    var name: String?
-    var description: String?
+    var name: String
+    var description: String
     var link: URL?
-    var featureList: [String]?
+    var featureList: [String]
     var featureListBonus: [String]?
-    var difficulty: Difficulty?
-    var time: Time?
-    var category: Category?
-    var platform: Platform?
+    var difficulty: Difficulty
+    var time: Time
+    var category: Category
+    var platform: Platform
     var uniqueToken: String
 
-    init() {
-        self.uniqueToken = randomString(length: 32)
-    }
-    
-    init(name: String,
-         description: String,
-         link: URL?,
-         featureList: [String],
-         featureListBonus: [String]?,
-         difficulty: Difficulty,
-         time: Time,
-         category: Category,
-         platform: Platform
+    init(name: String = "",
+         description: String = "",
+         link: URL? = nil,
+         featureList: [String] = [],
+         featureListBonus: [String]? = [],
+         difficulty: Difficulty = Difficulty.undefined,
+         time: Time = Time.undefined,
+         category: Category = Category.undefined,
+         platform: Platform = Platform.undefined
         ) {
         self.name = name
         self.description = description
