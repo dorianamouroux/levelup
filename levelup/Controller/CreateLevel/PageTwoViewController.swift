@@ -27,7 +27,7 @@ class PageTwoViewController: UIViewController {
             removeButton.isHidden = false
         }
         else {
-            errorMessage("You need to write a feature")
+            errorPopupWithOk("You need to write a feature", vc: self)
         }
     }
     @IBOutlet weak var removeButton: UIButton!
@@ -55,7 +55,7 @@ class PageTwoViewController: UIViewController {
             removeButtonBonus.isHidden = false
         }
         else {
-            errorMessage("You need to write a feature")
+            errorPopupWithOk("You need to write a feature", vc: self)
         }
     }
     @IBOutlet weak var bonusOutput: UITextView!
@@ -75,22 +75,15 @@ class PageTwoViewController: UIViewController {
 
     }
     
-    
     @IBAction func nextPageAction(_ sender: Any) {
         if featureList.count < 2 {
-            errorMessage("You need to specify at least two features.")
+            errorPopupWithOk("You need to specify at least two features.", vc: self)
             return
         }
         
         if let parent = tabBarController as? CreateLevelController {
             parent.goToPageThree(featureList: featureList, bonusList: bonusList)
         }
-    }
-    
-    func errorMessage(_ message:String) {
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

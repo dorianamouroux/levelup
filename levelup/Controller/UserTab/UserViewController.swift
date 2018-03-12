@@ -31,9 +31,4 @@ class UserViewController: UINavigationController {
         
         CustomUser.instance.removeOnChange(context: self)
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
 }

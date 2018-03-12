@@ -53,7 +53,6 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "detailLevel") {
             let vc = segue.destination as! DetailViewController;
-            
             vc.data = sender as? Level
         }
     }
@@ -73,9 +72,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "test", for: indexPath) as! LevelTableViewCell
-        
         cell.layout(with: levelData![indexPath.row])
-        
         return cell
     }
     

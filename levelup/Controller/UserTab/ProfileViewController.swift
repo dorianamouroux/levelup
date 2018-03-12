@@ -45,7 +45,6 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         user = CustomUser.instance
     }
 
@@ -55,11 +54,6 @@ class ProfileViewController: UIViewController {
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     

@@ -20,7 +20,6 @@ class CreateLevelController: UITabBarController {
         level.name = nameValue
         level.description = descriptionValue
         if let url = urlValue {
-            print(url)
             level.link = URL(string: url)
         }
         goToPage(1)
@@ -44,11 +43,8 @@ class CreateLevelController: UITabBarController {
         
         LevelManager.instance.addLevelToDb(level: level) { (err) in
             if let error = err {
-                let alert = UIAlertController(title: "Error", message: error, preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-            }
-            else {
+                errorPopupWithOk(error, vc: self)
+            } else {
                 self.performSegue(withIdentifier: "unwindToDetail", sender: self)
             }
         }
@@ -61,11 +57,6 @@ class CreateLevelController: UITabBarController {
         tabBar.isHidden = true
         
         goToPage(0)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
