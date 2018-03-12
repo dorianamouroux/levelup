@@ -22,7 +22,6 @@
 		58BADA8E203E1555009BC6A6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BADA8D203E1555009BC6A6 /* DetailViewController.swift */; };
 		58BC4ADC2035CFB200D64E70 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC4ADB2035CFB200D64E70 /* Level.swift */; };
 		58BC4ADE2035D28000D64E70 /* LevelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC4ADD2035D28000D64E70 /* LevelManager.swift */; };
-		58C72C8120527EFE009E136C /* random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C72C8020527EFE009E136C /* random.swift */; };
 		58C72C8420542197009E136C /* format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C72C8320542197009E136C /* format.swift */; };
 		58C72C862055C6AE009E136C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C72C852055C6AE009E136C /* MainTabBarController.swift */; };
 		58EC574F202B903A00141957 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC574E202B903A00141957 /* User.swift */; };
@@ -51,7 +50,6 @@
 		58BADA8D203E1555009BC6A6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		58BC4ADB2035CFB200D64E70 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		58BC4ADD2035D28000D64E70 /* LevelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelManager.swift; sourceTree = "<group>"; };
-		58C72C8020527EFE009E136C /* random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = random.swift; sourceTree = "<group>"; };
 		58C72C8320542197009E136C /* format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = format.swift; sourceTree = "<group>"; };
 		58C72C852055C6AE009E136C /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		58EC574E202B903A00141957 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = levelup/Model/User.swift; sourceTree = SOURCE_ROOT; };
@@ -147,7 +145,6 @@
 		58C72C8220527F03009E136C /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				58C72C8020527EFE009E136C /* random.swift */,
 				58C72C8320542197009E136C /* format.swift */,
 				58A7AC6B20570C64006D46C0 /* popup.swift */,
 			);
@@ -384,7 +381,6 @@
 				58EE4CE4204746B9008C0F00 /* PageTwoViewController.swift in Sources */,
 				58EE4CE2204737CF008C0F00 /* PageOneViewController.swift in Sources */,
 				58FAA090201A2A9300321916 /* ProfileViewController.swift in Sources */,
-				58C72C8120527EFE009E136C /* random.swift in Sources */,
 				58354D36202A6340008C3152 /* UserViewController.swift in Sources */,
 				58EC574F202B903A00141957 /* User.swift in Sources */,
 				58FAA08C201A02EF00321916 /* LoginViewController.swift in Sources */,

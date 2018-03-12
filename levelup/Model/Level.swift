@@ -35,7 +35,6 @@ class Level {
     var time: Time
     var category: Category
     var platform: Platform
-    var uniqueToken: String
 
     init(name: String = "",
          description: String = "",
@@ -56,7 +55,6 @@ class Level {
         self.time = time
         self.category = category
         self.platform = platform
-        self.uniqueToken = randomString(length: 32)
     }
     
 }

@@ -14,11 +14,10 @@ class LevelManager {
 
     // singleton
     static let instance = LevelManager()
-
     init() {}
-
-    func query() {
-
+    
+    func getRandomToken() -> Int64 {
+        return Int64(arc4random()) &+ (Int64(arc4random()) << 32)
     }
     
     func convertToModel(_ rawData:[String : Any]) -> Level {
@@ -35,31 +34,48 @@ class LevelManager {
         )
     }
     
-    func getRandomLevel(cb: @escaping (_ err: String?, _ level: Level) -> Void)  {
-        let rawData: [String: Any] = [
-            "name": "Random",
-            "description": "Hey hey random",
-            "link": "",
-            "featureList": ["test 1", "test 2"],
-            "featureListBonus": ["bonus test 1", "bonus test 2"],
-            "difficulty": Difficulty.beginner,
-            "time": Time.medium,
-            "category": Category.game,
-            "platform": Category.application,
-            "token": "234251234",
-        ]
+    func getRandomLevel(cb: @escaping (_ err: String?, _ level: Level?) -> Void)  {
+        let db = Firestore.firestore()
+        let docRef = db.collection("level")
+        
+        let randomToken = getRandomToken()
+        
+        var queryRef = docRef.whereField("token", isGreaterThan: randomToken)
+            .order(by: "token")
+            .limit(to: 1)
+        
+        queryRef.getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                let documents = querySnapshot!.documents
+                
+                if documents.count == 1 {
+                    cb(nil, self.convertToModel(documents[0].data()))
+                }
+                else {
+                    queryRef = docRef.whereField("token", isLessThanOrEqualTo: randomToken)
+                        .order(by: "token", descending: true)
+                        .limit(to: 1)
+                    
+                    queryRef.getDocuments() { (querySnapshot, err) in
+                        if let err = err {
+                            print("Error getting documents: \(err)")
+                        } else {
+                            let documents = querySnapshot!.documents
+                            
+                            if documents.count == 1 {
+                                cb(nil, self.convertToModel(documents[0].data()))
+                            }
+                            else {
+                                cb(nil, nil)
+                            }
+                        }
+                    }
+                }
+            }
+        }
     
-        cb(nil, Level(
-            name: rawData["name"] as! String,
-            description: (rawData["description"] as? String) ?? "No description",
-            link: URL(string: (rawData["link"] as? String) ?? ""),
-            featureList: (rawData["featureList"] as? [String]) ?? [],
-            featureListBonus: (rawData["featureListBonus"] as? [String]) ?? [],
-            difficulty: Difficulty(rawValue: (rawData["difficulty"] as? Int) ?? -1)!,
-            time: Time(rawValue: (rawData["time"] as? Int) ?? -1)!,
-            category: Category(rawValue: (rawData["category"] as? Int) ?? -1)!,
-            platform: Platform(rawValue: (rawData["platform"] as? Int) ?? -1)!
-        ))
     }
     
     func getList(cb: @escaping (_ err: String?, _ levels: [Level]) -> Void) {
@@ -94,7 +110,7 @@ class LevelManager {
             "time": level.time.rawValue as Any,
             "category": level.category.rawValue as Any,
             "platform": level.platform.rawValue as Any,
-            "token": level.uniqueToken
+            "token": getRandomToken()
         ]
         docRef.addDocument(data: data) { err in
             if let err = err {
