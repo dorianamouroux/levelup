@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
     var data: Level?
     var fetchRandom = false
     
+    @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var nameView: UILabel!
     @IBOutlet weak var descriptionView: UILabel!
     @IBOutlet weak var linkView: UILabel!
@@ -29,6 +30,7 @@ class DetailViewController: UIViewController {
         super.viewWillAppear(animated)
         
         if fetchRandom == true {
+            viewContainer.isHidden = true
             LevelManager.instance.getRandomLevel() { (err, level) in
                 self.data = level
                 self.displayContent()
@@ -68,6 +70,7 @@ class DetailViewController: UIViewController {
         timeView.text = displayFromEnum(level.time)
         platformView.text = displayFromEnum(level.platform)
         categoryView.text = displayFromEnum(level.category)
+        viewContainer.isHidden = false
     }
     
     func displayFromEnum(_ data: Any?) -> String {
