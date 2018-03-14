@@ -435,7 +435,7 @@
         <!--Item-->
         <scene sceneID="8b0-C9-VEr">
             <objects>
-                <viewController id="fTQ-P6-LYi" customClass="DetailViewController" customModule="levelup" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailViewPage" id="fTQ-P6-LYi" customClass="DetailViewController" customModule="levelup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tru-g3-SeW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

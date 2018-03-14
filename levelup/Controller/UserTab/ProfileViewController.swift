@@ -89,7 +89,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "detailLevel", sender: levelData![indexPath.row])
+        performSegue(withIdentifier: "detailViewFromUserPage", sender: levelData![indexPath.row])
     }
     
 }

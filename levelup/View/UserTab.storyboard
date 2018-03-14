@@ -104,11 +104,20 @@
                         <outlet property="levelListView" destination="RHm-7N-ARs" id="zwP-3v-tQ2"/>
                         <outlet property="userNameView" destination="uMq-Ap-ghX" id="CTX-JT-yir"/>
                         <outlet property="userPictureView" destination="HiR-rj-5Xj" id="DNx-lU-aLf"/>
+                        <segue destination="fev-fW-l68" kind="show" identifier="detailViewFromUserPage" id="P9t-5k-eWV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C7r-KC-1Ze" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1856.8" y="890.10494752623697"/>
+        </scene>
+        <!--detailViewPage-->
+        <scene sceneID="hmA-GE-3bS">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="detailViewPage" storyboardName="Main" referencedIdentifier="detailViewPage" id="fev-fW-l68" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b00-Os-Mqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2689" y="663"/>
         </scene>
     </scenes>
 </document>
