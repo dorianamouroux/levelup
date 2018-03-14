@@ -78,12 +78,18 @@ class LevelManager {
     
     }
     
-    func getList(cb: @escaping (_ err: String?, _ levels: [Level]) -> Void) {
+    func getList(ofCurrentUser:Bool = false, cb: @escaping (_ err: String?, _ levels: [Level]) -> Void) {
         let db = Firestore.firestore()
         let docRef = db.collection("level")
+        var queryRef:Query
+
+        if ofCurrentUser {
+            queryRef = docRef.whereField("user", isEqualTo: CustomUser.instance.uid)
+        } else {
+            queryRef = docRef as Query
+        }
         
-        
-        docRef.getDocuments () { (querySnapshot, err) in
+        queryRef.getDocuments() { (querySnapshot, err) in
             var levels = [Level]()
             if let err = err {
                 print("Error getting documents: \(err)")
