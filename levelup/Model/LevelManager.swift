@@ -110,7 +110,8 @@ class LevelManager {
             "time": level.time.rawValue as Any,
             "category": level.category.rawValue as Any,
             "platform": level.platform.rawValue as Any,
-            "token": getRandomToken()
+            "token": getRandomToken(),
+            "user": CustomUser.instance.uid,
         ]
         docRef.addDocument(data: data) { err in
             if let err = err {
