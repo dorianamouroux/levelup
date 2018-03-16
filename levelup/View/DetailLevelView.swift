@@ -37,9 +37,9 @@ class DetailLevelView: UIView {
             linkView.text = "No link"
         }
         
-        featureListView.text = formatFeatureList(list: level.featureList, emptyValue: "No features")
+        featureListView.text = Utils.formatFeatureList(list: level.featureList, emptyValue: "No features")
         if let listBonus = level.featureListBonus {
-            bonusListView.text = formatFeatureList(list: listBonus, emptyValue: "No bonus features")
+            bonusListView.text = Utils.formatFeatureList(list: listBonus, emptyValue: "No bonus features")
         } else {
             bonusListView.text = "No bonus features"
         }

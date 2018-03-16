@@ -43,7 +43,7 @@ class CreateLevelController: UITabBarController {
         
         LevelManager.instance.addLevelToDb(level: level) { (err) in
             if let error = err {
-                errorPopupWithOk(error, vc: self)
+                Utils.errorPopupWithOk(error, vc: self)
             } else {
                 self.performSegue(withIdentifier: "unwindToDetail", sender: self)
             }

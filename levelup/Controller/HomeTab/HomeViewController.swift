@@ -47,7 +47,7 @@ class HomeViewController: UIViewController {
             performSegue(withIdentifier: "createLevelSegue", sender: nil)
         }
         else {
-            errorPopupWithOk("Login first!", vc: self)
+            Utils.errorPopupWithOk("Login first!", vc: self)
         }
     }
 

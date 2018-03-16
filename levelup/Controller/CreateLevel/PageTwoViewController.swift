@@ -14,7 +14,7 @@ class PageTwoViewController: UIViewController {
     // feature
     var featureList:[String] = [] {
         didSet {
-            featureOutput?.text = formatFeatureList(list: featureList)
+            featureOutput?.text = Utils.formatFeatureList(list: featureList)
         }
     }
     @IBOutlet weak var featureInput: UITextField!
@@ -27,7 +27,7 @@ class PageTwoViewController: UIViewController {
             removeButton.isHidden = false
         }
         else {
-            errorPopupWithOk("You need to write a feature", vc: self)
+            Utils.errorPopupWithOk("You need to write a feature", vc: self)
         }
     }
     @IBOutlet weak var removeButton: UIButton!
@@ -42,7 +42,7 @@ class PageTwoViewController: UIViewController {
     // bonus feature
     var bonusList:[String] = [] {
         didSet {
-            bonusOutput?.text = formatFeatureList(list: bonusList)
+            bonusOutput?.text = Utils.formatFeatureList(list: bonusList)
         }
     }
     @IBOutlet weak var bonusInput: UITextField!
@@ -55,7 +55,7 @@ class PageTwoViewController: UIViewController {
             removeButtonBonus.isHidden = false
         }
         else {
-            errorPopupWithOk("You need to write a feature", vc: self)
+            Utils.errorPopupWithOk("You need to write a feature", vc: self)
         }
     }
     @IBOutlet weak var bonusOutput: UITextView!
@@ -77,7 +77,7 @@ class PageTwoViewController: UIViewController {
     
     @IBAction func nextPageAction(_ sender: Any) {
         if featureList.count < 2 {
-            errorPopupWithOk("You need to specify at least two features.", vc: self)
+            Utils.errorPopupWithOk("You need to specify at least two features.", vc: self)
             return
         }
         

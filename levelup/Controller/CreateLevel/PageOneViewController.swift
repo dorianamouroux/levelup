@@ -48,7 +48,7 @@ class PageOneViewController: UIViewController {
         }
         
         // alert the user to give him the error
-        errorPopupWithOk("You need to give a name and description to your project", vc: self)
+        Utils.errorPopupWithOk("You need to give a name and description to your project", vc: self)
         return false
     }
     
