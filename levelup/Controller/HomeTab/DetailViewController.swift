@@ -24,6 +24,7 @@ class DetailViewController: UIViewController {
             viewContainer.isHidden = true
             LevelManager.instance.getRandomLevel() { (err, level) in
                 self.viewContainer.data = level
+                self.viewContainer.isHidden = false
             }
         } else {
             self.viewContainer.data = data
