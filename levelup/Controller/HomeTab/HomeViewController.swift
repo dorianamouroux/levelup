@@ -83,7 +83,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         LevelManager.instance.getList() { (err, levels) in
-            print(levels)
             self.levelData = levels
             self.levelList.reloadData()
             refreshControl.endRefreshing()
