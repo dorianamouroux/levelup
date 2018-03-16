@@ -37,6 +37,7 @@ class ProfileViewController: UIViewController {
 
         if let photoUrl = user?.photoURL {
             userPictureView.kf.setImage(with: photoUrl)
+            userPictureView.layer.cornerRadius = 75
         }
     }
     
@@ -73,6 +74,10 @@ class ProfileViewController: UIViewController {
 }
 
 extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
