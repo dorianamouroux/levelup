@@ -27,7 +27,7 @@ class CustomUser {
     var email:String?
     var photoURL:URL?
     
-    init() {
+    private init() {
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
             if user != nil {
                 self.status = .user

@@ -11,6 +11,7 @@
 		5815E221203B69ED00F1EEEB /* LevelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815E220203B69ED00F1EEEB /* LevelTableViewCell.swift */; };
 		5815E224203B722E00F1EEEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5815E223203B722E00F1EEEB /* GoogleService-Info.plist */; };
 		58354D36202A6340008C3152 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58354D35202A6340008C3152 /* UserViewController.swift */; };
+		585589ED205BDD5E00D8A5CC /* DetailLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585589EC205BDD5E00D8A5CC /* DetailLevelView.swift */; };
 		5863D237202E36DF00553368 /* UserTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5863D236202E36DF00553368 /* UserTab.storyboard */; };
 		589CE766203593D900231119 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589CE765203593D900231119 /* HomeViewController.swift */; };
 		589CE7682035A1E700231119 /* LevelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589CE7672035A1E700231119 /* LevelCell.xib */; };
@@ -37,6 +38,7 @@
 		5815E220203B69ED00F1EEEB /* LevelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableViewCell.swift; sourceTree = "<group>"; };
 		5815E223203B722E00F1EEEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		58354D35202A6340008C3152 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		585589EC205BDD5E00D8A5CC /* DetailLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLevelView.swift; sourceTree = "<group>"; };
 		5863D236202E36DF00553368 /* UserTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserTab.storyboard; sourceTree = "<group>"; };
 		589CE765203593D900231119 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		589CE7672035A1E700231119 /* LevelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelCell.xib; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				58AE7DCD200BF1E700259273 /* LaunchScreen.storyboard */,
 				5815E222203B69F900F1EEEB /* LevelCell */,
 				58AE7DC8200BF1E700259273 /* Main.storyboard */,
+				585589EC205BDD5E00D8A5CC /* DetailLevelView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				58FAA090201A2A9300321916 /* ProfileViewController.swift in Sources */,
 				58354D36202A6340008C3152 /* UserViewController.swift in Sources */,
 				58EC574F202B903A00141957 /* User.swift in Sources */,
+				585589ED205BDD5E00D8A5CC /* DetailLevelView.swift in Sources */,
 				58FAA08C201A02EF00321916 /* LoginViewController.swift in Sources */,
 				58EE4CE0204735D4008C0F00 /* CreateLevelController.swift in Sources */,
 				58C72C862055C6AE009E136C /* MainTabBarController.swift in Sources */,

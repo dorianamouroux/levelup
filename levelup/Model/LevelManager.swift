@@ -14,7 +14,7 @@ class LevelManager {
 
     // singleton
     static let instance = LevelManager()
-    init() {}
+    private init() {}
     
     func getRandomToken() -> Int64 {
         return Int64(arc4random()) &+ (Int64(arc4random()) << 32)

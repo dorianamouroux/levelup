@@ -11,7 +11,6 @@ import GoogleSignIn
 
 
 class LoginViewController: UIViewController, GIDSignInUIDelegate {
-    var handle: NSObjectProtocol?
 
     @IBAction func loginGoogleAction() {
         GIDSignIn.sharedInstance().signIn()

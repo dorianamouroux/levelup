@@ -150,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uSF-vx-EYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2020" y="-1745.577211394303"/>
+            <point key="canvasLocation" x="3329" y="-1775"/>
         </scene>
         <!--Item-->
         <scene sceneID="B4k-tR-hOQ">
@@ -255,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H9L-Fl-lUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2020" y="-1045.7271364317842"/>
+            <point key="canvasLocation" x="3330" y="-1061"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="1Sd-8s-tL3">
@@ -333,7 +333,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ve-HU-zJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2020" y="-2450.8245877061472"/>
+            <point key="canvasLocation" x="3329" y="-2490"/>
         </scene>
         <!--Item-->
         <scene sceneID="fFo-gu-m2L">
@@ -355,7 +355,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QfB-pf-LFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="04u-zg-1ZR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1194" y="-1451"/>
+            <point key="canvasLocation" x="2076" y="-1061"/>
         </scene>
         <!--Home-->
         <scene sceneID="RvN-DE-hvX">
@@ -379,11 +379,12 @@
                     <connections>
                         <outlet property="levelList" destination="1xF-nn-aft" id="3nS-oW-HyQ"/>
                         <segue destination="fTQ-P6-LYi" kind="show" identifier="detailLevel" id="NWQ-ZZ-jgc"/>
+                        <segue destination="iUI-pL-QU9" kind="show" identifier="createLevelSegue" animates="NO" id="Lcz-QB-Y7G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9m-l0-rFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1193" y="-336"/>
+            <point key="canvasLocation" x="1089" y="-519"/>
         </scene>
         <!--main-->
         <scene sceneID="Ua2-SU-jtw">
@@ -399,7 +400,6 @@
                         <segue destination="WkN-dP-tGc" kind="relationship" relationship="viewControllers" id="Xrj-Af-o6i"/>
                         <segue destination="Z8k-bD-VF5" kind="relationship" relationship="viewControllers" id="DU9-AG-xIJ"/>
                         <segue destination="fTQ-P6-LYi" kind="relationship" relationship="viewControllers" id="Dvb-pm-Dqd"/>
-                        <segue destination="iUI-pL-QU9" kind="relationship" relationship="viewControllers" id="b6a-Ww-PEU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWl-c1-X4x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -440,7 +440,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0hy-CT-gCW">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0hy-CT-gCW" customClass="DetailLevelView" customModule="levelup" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -523,6 +523,17 @@
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="bonusListView" destination="By2-1y-MTf" id="uA6-MZ-a8b"/>
+                                    <outlet property="categoryView" destination="xeV-N8-XE5" id="4hl-vg-sey"/>
+                                    <outlet property="descriptionView" destination="o9E-Jc-Fvm" id="F9o-hM-V46"/>
+                                    <outlet property="difficultyView" destination="3hz-5c-ajf" id="eMz-kO-bn0"/>
+                                    <outlet property="featureListView" destination="wpE-CA-zRy" id="0CW-dt-dfE"/>
+                                    <outlet property="linkView" destination="kd2-LN-59h" id="aHy-iR-uPZ"/>
+                                    <outlet property="nameView" destination="Bbj-nP-Yrm" id="gfQ-hl-YIY"/>
+                                    <outlet property="platformView" destination="34F-Re-hvY" id="Sop-v6-oEq"/>
+                                    <outlet property="timeView" destination="gxc-ps-fXC" id="4Zf-47-wXY"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -530,24 +541,15 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="xjW-9P-drf"/>
                     <connections>
-                        <outlet property="bonusListView" destination="By2-1y-MTf" id="Tap-EV-mGL"/>
-                        <outlet property="categoryView" destination="xeV-N8-XE5" id="Gpx-ty-apL"/>
-                        <outlet property="descriptionView" destination="o9E-Jc-Fvm" id="Xul-Z3-GNd"/>
-                        <outlet property="difficultyView" destination="3hz-5c-ajf" id="fEl-gC-sYU"/>
-                        <outlet property="featureListView" destination="wpE-CA-zRy" id="qs9-Gv-Jas"/>
-                        <outlet property="linkView" destination="kd2-LN-59h" id="6hO-AA-AHS"/>
-                        <outlet property="nameView" destination="Bbj-nP-Yrm" id="Q7r-Aq-yo6"/>
-                        <outlet property="platformView" destination="34F-Re-hvY" id="AfY-ma-WYT"/>
-                        <outlet property="timeView" destination="gxc-ps-fXC" id="b0x-4K-8WV"/>
                         <outlet property="viewContainer" destination="0hy-CT-gCW" id="VlX-uy-iqi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YbE-OC-aSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2020" y="-337.78110944527737"/>
+            <point key="canvasLocation" x="2076" y="50"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Dvb-pm-Dqd"/>
+        <segue reference="NWQ-ZZ-jgc"/>
     </inferredMetricsTieBreakers>
 </document>

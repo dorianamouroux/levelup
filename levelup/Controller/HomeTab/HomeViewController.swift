@@ -10,33 +10,51 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var levelList: UITableView!
-
+    // refs
+    weak var refNavigationItem: UINavigationItem?
     
+    // outlets
+    @IBOutlet weak var levelList: UITableView!
+    
+    // what will be in the table view
+    var levelData: [Level]?
+
+    // pull to refresh on the table view
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
-    
-        refreshControl.addTarget(self, action:
-                #selector(handleRefresh),
-                for: UIControlEvents.valueChanged)
+        
+        refreshControl.addTarget(self, action: #selector(handleRefresh), for: UIControlEvents.valueChanged)
         refreshControl.tintColor = UIColor.red
-
+        
         return refreshControl
     }()
     
-    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-        LevelManager.instance.getList() { (err, levels) in
-            print(levels)
-            self.levelData = levels
-            self.levelList.reloadData()
-            refreshControl.endRefreshing()
-        }
+    override func viewDidAppear(_ animated:Bool) {
+        super.viewDidAppear(animated)
+        
+        let button = UIBarButtonItem(title: "New", style: .done, target: self, action: #selector(newLevel))
+        refNavigationItem?.rightBarButtonItem = button
     }
     
-    var levelData: [Level]?
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        refNavigationItem?.rightBarButtonItem = nil
+    }
+    
+    @objc func newLevel() {
+        if CustomUser.instance.status == .user {
+            performSegue(withIdentifier: "createLevelSegue", sender: nil)
+        }
+        else {
+            errorPopupWithOk("Login first!", vc: self)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        refNavigationItem = tabBarController!.navigationItem
         
 
         levelList.register(UINib(nibName: "LevelCell", bundle: nil), forCellReuseIdentifier: "test")
@@ -63,6 +81,14 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        LevelManager.instance.getList() { (err, levels) in
+            print(levels)
+            self.levelData = levels
+            self.levelList.reloadData()
+            refreshControl.endRefreshing()
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let data = levelData {

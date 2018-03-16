@@ -114,8 +114,8 @@
         <!--detailViewPage-->
         <scene sceneID="hmA-GE-3bS">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="detailViewPage" storyboardName="Main" referencedIdentifier="detailViewPage" id="fev-fW-l68" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b00-Os-Mqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="detailViewPage" storyboardName="Main" referencedIdentifier="detailViewPage" id="fev-fW-l68" sceneMemberID="viewController"/>
             </objects>
             <point key="canvasLocation" x="2689" y="663"/>
         </scene>

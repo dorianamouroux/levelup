@@ -10,7 +10,6 @@ import UIKit
 
 
 class UserViewController: UINavigationController {
-    var handle: NSObjectProtocol?
     
     @objc func userStatusLoaded() {
         let user = CustomUser.instance
