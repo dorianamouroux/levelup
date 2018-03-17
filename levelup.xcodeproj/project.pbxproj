@@ -13,7 +13,6 @@
 		58354D36202A6340008C3152 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58354D35202A6340008C3152 /* UserViewController.swift */; };
 		585589ED205BDD5E00D8A5CC /* DetailLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585589EC205BDD5E00D8A5CC /* DetailLevelView.swift */; };
 		585589EF205C2FB400D8A5CC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585589EE205C2FB400D8A5CC /* Utils.swift */; };
-		5863D237202E36DF00553368 /* UserTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5863D236202E36DF00553368 /* UserTab.storyboard */; };
 		589CE766203593D900231119 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589CE765203593D900231119 /* HomeViewController.swift */; };
 		589CE7682035A1E700231119 /* LevelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589CE7672035A1E700231119 /* LevelCell.xib */; };
 		58AE7DC5200BF1E700259273 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AE7DC4200BF1E700259273 /* AppDelegate.swift */; };
@@ -39,7 +38,6 @@
 		58354D35202A6340008C3152 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		585589EC205BDD5E00D8A5CC /* DetailLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLevelView.swift; sourceTree = "<group>"; };
 		585589EE205C2FB400D8A5CC /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		5863D236202E36DF00553368 /* UserTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserTab.storyboard; sourceTree = "<group>"; };
 		589CE765203593D900231119 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		589CE7672035A1E700231119 /* LevelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelCell.xib; sourceTree = "<group>"; };
 		58AE7DC1200BF1E700259273 /* levelup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = levelup.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,7 +162,6 @@
 		58FAA0852019F3A800321916 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5863D236202E36DF00553368 /* UserTab.storyboard */,
 				58AE7DCD200BF1E700259273 /* LaunchScreen.storyboard */,
 				5815E222203B69F900F1EEEB /* LevelCell */,
 				58AE7DC8200BF1E700259273 /* Main.storyboard */,
@@ -277,7 +274,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				58AE7DCF200BF1E700259273 /* LaunchScreen.storyboard in Resources */,
-				5863D237202E36DF00553368 /* UserTab.storyboard in Resources */,
 				58AE7DCC200BF1E700259273 /* Assets.xcassets in Resources */,
 				58AE7DCA200BF1E700259273 /* Main.storyboard in Resources */,
 				589CE7682035A1E700231119 /* LevelCell.xib in Resources */,
@@ -300,6 +296,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/IoniconsKit/IoniconsKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
@@ -318,6 +315,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IoniconsKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",

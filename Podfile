@@ -20,6 +20,7 @@ def shared_pods
     pod 'IQKeyboardManagerSwift'
     pod 'Firebase'
     pod 'GoogleSignIn'
+    pod "IoniconsKit"
 end
 
 target 'levelup' do

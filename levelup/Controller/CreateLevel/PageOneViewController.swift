@@ -34,8 +34,17 @@ class PageOneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        descriptionField.layer.borderColor = nameField.layer.borderColor
+//        [yourTextView.layer setBackgroundColor: [[UIColor whiteColor] CGColor]];
+//        [yourTextView.layer setBorderColor: [[UIColor grayColor] CGColor]];
+//        [yourTextView.layer setBorderWidth: 1.0];
+//        [yourTextView.layer setCornerRadius:8.0f];
+//        [yourTextView.layer setMasksToBounds:YES];
+        
+        descriptionField.layer.backgroundColor = UIColor.white.cgColor
+        descriptionField.layer.borderColor = UIColor.lightGray.cgColor
         descriptionField.layer.borderWidth = 1.0
+        descriptionField.layer.cornerRadius = 8.0
+        descriptionField.layer.masksToBounds = true
     }
 
     func validate() -> Bool {
