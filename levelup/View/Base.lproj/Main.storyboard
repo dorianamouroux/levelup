@@ -382,13 +382,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example URL (optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kw4-tg-t97">
-                                <rect key="frame" x="15" y="463" width="345" height="25.5"/>
+                                <rect key="frame" x="80.5" y="463" width="214" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="et8-3Y-5i8">
-                                <rect key="frame" x="0.0" y="497" width="375" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="et8-3Y-5i8">
+                                <rect key="frame" x="15" y="497" width="375" height="30"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" link="YES"/>
                                 </accessibility>
@@ -401,7 +401,7 @@
                                 <color key="backgroundColor" white="0.21986607142857142" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="JdH-O4-gkU"/>
-                                    <constraint firstAttribute="width" constant="100" id="oLr-9G-dZq"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="oLr-9G-dZq"/>
                                 </constraints>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.93725490196078431" green="0.32549019607843138" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -425,7 +425,7 @@
                         <constraints>
                             <constraint firstItem="QUZ-LV-9x4" firstAttribute="width" secondItem="tYc-ZT-6d3" secondAttribute="width" id="1bU-H7-yCo"/>
                             <constraint firstItem="2dP-99-Fqs" firstAttribute="top" secondItem="QUZ-LV-9x4" secondAttribute="bottom" constant="8" id="26H-x6-Uma"/>
-                            <constraint firstItem="kw4-tg-t97" firstAttribute="leading" secondItem="ORd-sN-Njo" secondAttribute="leading" constant="15" id="2sB-Ky-ZNN"/>
+                            <constraint firstItem="kw4-tg-t97" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ORd-sN-Njo" secondAttribute="leading" id="2sB-Ky-ZNN"/>
                             <constraint firstItem="QUZ-LV-9x4" firstAttribute="trailing" secondItem="ORd-sN-Njo" secondAttribute="trailing" constant="15" id="301-oh-okc"/>
                             <constraint firstItem="QUZ-LV-9x4" firstAttribute="leading" secondItem="ORd-sN-Njo" secondAttribute="leading" constant="15" id="4nV-vY-teR"/>
                             <constraint firstItem="et8-3Y-5i8" firstAttribute="top" secondItem="kw4-tg-t97" secondAttribute="bottom" constant="8" id="6EI-pe-wi7"/>
@@ -439,13 +439,14 @@
                             <constraint firstItem="SNe-Rp-tap" firstAttribute="top" secondItem="nO2-xH-bKa" secondAttribute="bottom" constant="8" id="Snt-c4-TSJ"/>
                             <constraint firstItem="kw4-tg-t97" firstAttribute="centerX" secondItem="ORd-sN-Njo" secondAttribute="centerX" id="UQZ-PY-Frk"/>
                             <constraint firstItem="2dP-99-Fqs" firstAttribute="leading" secondItem="ORd-sN-Njo" secondAttribute="leading" constant="15" id="YSn-5b-Al0"/>
+                            <constraint firstItem="MRL-u4-RXm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tYc-ZT-6d3" secondAttribute="leading" constant="20" symbolic="YES" id="eBK-vi-wYO"/>
                             <constraint firstItem="ORd-sN-Njo" firstAttribute="bottom" secondItem="MRL-u4-RXm" secondAttribute="bottom" constant="15" id="fKA-fA-R69"/>
                             <constraint firstItem="nO2-xH-bKa" firstAttribute="top" secondItem="ORd-sN-Njo" secondAttribute="top" constant="16" id="fr5-wv-BJ6"/>
                             <constraint firstItem="et8-3Y-5i8" firstAttribute="trailing" secondItem="ORd-sN-Njo" secondAttribute="trailing" constant="15" id="h4k-Ma-esT"/>
                             <constraint firstItem="ORd-sN-Njo" firstAttribute="trailing" secondItem="SNe-Rp-tap" secondAttribute="trailing" constant="15" id="jMh-ua-OSK"/>
                             <constraint firstItem="ORd-sN-Njo" firstAttribute="trailing" secondItem="2dP-99-Fqs" secondAttribute="trailing" constant="16" id="lJc-dg-9Fl"/>
                             <constraint firstItem="QUZ-LV-9x4" firstAttribute="top" secondItem="SNe-Rp-tap" secondAttribute="bottom" constant="32" id="pP3-9c-Iqe"/>
-                            <constraint firstItem="ORd-sN-Njo" firstAttribute="trailing" secondItem="kw4-tg-t97" secondAttribute="trailing" constant="15" id="u0R-HG-bDt"/>
+                            <constraint firstItem="ORd-sN-Njo" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kw4-tg-t97" secondAttribute="trailing" id="u0R-HG-bDt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ORd-sN-Njo"/>
                     </view>
