@@ -1,0 +1,116 @@
+Started phase 0, duration: 60s @ 13:03:31(+0200) 2018-03-29
+Report @ 13:03:41(+0200) 2018-03-29
+  Scenarios launched:  199
+  Scenarios completed: 192
+  Requests completed:  192
+  RPS sent: 20.04
+  Request latency:
+    min: 198.5
+    max: 911.4
+    median: 268.3
+    p95: 792.4
+    p99: 839.1
+  Codes:
+    200: 192
+
+Report @ 13:03:51(+0200) 2018-03-29
+  Scenarios launched:  201
+  Scenarios completed: 201
+  Requests completed:  201
+  RPS sent: 20.12
+  Request latency:
+    min: 197.8
+    max: 921.6
+    median: 242
+    p95: 797
+    p99: 840.5
+  Codes:
+    200: 201
+
+Report @ 13:04:01(+0200) 2018-03-29
+  Scenarios launched:  200
+  Scenarios completed: 201
+  Requests completed:  201
+  RPS sent: 20.06
+  Request latency:
+    min: 200.1
+    max: 801.8
+    median: 224.7
+    p95: 772.6
+    p99: 794.8
+  Codes:
+    200: 201
+
+Report @ 13:04:11(+0200) 2018-03-29
+  Scenarios launched:  200
+  Scenarios completed: 202
+  Requests completed:  202
+  RPS sent: 20.04
+  Request latency:
+    min: 198.9
+    max: 759.1
+    median: 215.8
+    p95: 461.5
+    p99: 757.1
+  Codes:
+    200: 202
+
+Report @ 13:04:21(+0200) 2018-03-29
+  Scenarios launched:  200
+  Scenarios completed: 198
+  Requests completed:  198
+  RPS sent: 20.02
+  Request latency:
+    min: 202
+    max: 768
+    median: 225.3
+    p95: 432.7
+    p99: 757.4
+  Codes:
+    200: 198
+
+Report @ 13:04:31(+0200) 2018-03-29
+  Scenarios launched:  200
+  Scenarios completed: 200
+  Requests completed:  200
+  RPS sent: 20
+  Request latency:
+    min: 193
+    max: 782.5
+    median: 219.4
+    p95: 460.3
+    p99: 514.6
+  Codes:
+    200: 200
+
+Report @ 13:04:31(+0200) 2018-03-29
+  Scenarios launched:  0
+  Scenarios completed: 6
+  Requests completed:  6
+  RPS sent: NaN
+  Request latency:
+    min: 197
+    max: 451.9
+    median: 216.7
+    p95: NaN
+    p99: NaN
+  Codes:
+    200: 6
+
+All virtual users finished
+Summary report @ 13:04:31(+0200) 2018-03-29
+  Scenarios launched:  1200
+  Scenarios completed: 1200
+  Requests completed:  1200
+  RPS sent: 19.85
+  Request latency:
+    min: 193
+    max: 921.6
+    median: 224
+    p95: 773.5
+    p99: 801.8
+  Scenario counts:
+    0: 1200 (100%)
+  Codes:
+    200: 1200
+
