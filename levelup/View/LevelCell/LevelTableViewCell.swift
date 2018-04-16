@@ -11,6 +11,8 @@ import UIKit
 class LevelTableViewCell: UITableViewCell {
 
     @IBOutlet weak var contentText: UILabel!
+    @IBOutlet weak var difficultyText: UILabel!
+    @IBOutlet weak var durationText: UILabel!
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style:style, reuseIdentifier: reuseIdentifier)
@@ -22,6 +24,13 @@ class LevelTableViewCell: UITableViewCell {
     
     func layout(with level:Level) {
         contentText.text = level.name
+        difficultyText.text = displayFromEnum(level.difficulty)
+        durationText.text = displayFromEnum(level.time)
+    }
+    
+    func displayFromEnum(_ data: Any?) -> String {
+        guard let item = data else { return "Not specified" }
+        return String(describing: item)
     }
 }
 
