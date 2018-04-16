@@ -726,16 +726,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mh7-TS-88i">
-                                <rect key="frame" x="125" y="359" width="124" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login with Google"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign-in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSc-J8-6Td">
+                                <rect key="frame" x="16" y="50" width="343" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mh7-TS-88i">
+                                <rect key="frame" x="92" y="391" width="191" height="46"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.32156862749999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="191" id="Wwa-PY-QK6"/>
+                                    <constraint firstAttribute="height" constant="46" id="qBX-ua-qaE"/>
+                                </constraints>
+                                <state key="normal" title="Login with Google">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="loginGoogleAction" destination="e5z-sM-gkv" eventType="touchUpInside" id="gNz-rS-RrY"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ev4-Nj-VqI">
+                                <rect key="frame" x="16" y="117" width="343" height="205"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="205" id="ccJ-yQ-9wh"/>
+                                </constraints>
+                                <string key="text">You want to be part of the club? Awesome, click "Login with Google" and you are all set!
+
+Having a Level-Up account allows you to create Levels to share with the amazing community.
+
+Soon you will be able to comment, upvote, visit other user profiles and much more! </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0Ea-H4-cFI" firstAttribute="trailing" secondItem="gSc-J8-6Td" secondAttribute="trailing" constant="16" id="3Vf-eS-wli"/>
+                            <constraint firstItem="0Ea-H4-cFI" firstAttribute="trailing" secondItem="Ev4-Nj-VqI" secondAttribute="trailing" constant="16" id="EBa-VR-upi"/>
+                            <constraint firstItem="Ev4-Nj-VqI" firstAttribute="top" secondItem="gSc-J8-6Td" secondAttribute="top" constant="67" id="HX8-lV-IQj"/>
+                            <constraint firstItem="gSc-J8-6Td" firstAttribute="top" secondItem="0Ea-H4-cFI" secondAttribute="top" constant="30" id="Lmt-v5-SFC"/>
+                            <constraint firstItem="mh7-TS-88i" firstAttribute="top" secondItem="Ev4-Nj-VqI" secondAttribute="top" constant="274" id="Pvo-x6-3h7"/>
+                            <constraint firstItem="mh7-TS-88i" firstAttribute="centerX" secondItem="0Ea-H4-cFI" secondAttribute="centerX" id="V1m-0t-f3A"/>
+                            <constraint firstItem="Ev4-Nj-VqI" firstAttribute="leading" secondItem="0Ea-H4-cFI" secondAttribute="leading" constant="16" id="doY-pt-nuf"/>
+                            <constraint firstItem="gSc-J8-6Td" firstAttribute="leading" secondItem="0Ea-H4-cFI" secondAttribute="leading" constant="16" id="nZg-cC-2cD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0Ea-H4-cFI"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="ALe-5x-Wbd"/>
@@ -743,7 +780,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SS5-2C-NW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1974" y="1925"/>
+            <point key="canvasLocation" x="1856.8" y="1767.1664167916044"/>
         </scene>
         <!--Item-->
         <scene sceneID="iZC-pg-g0y">
@@ -759,7 +796,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cCJ-KM-48m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791" y="845"/>
+            <point key="canvasLocation" x="1089" y="1424"/>
         </scene>
         <!--Item-->
         <scene sceneID="HfU-AR-ze1">
