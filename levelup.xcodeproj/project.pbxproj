@@ -10,6 +10,7 @@
 		0F07FEE0B364B8464D5DEA80 /* Pods_levelup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611F0872CD7E1671EC0A0E0E /* Pods_levelup.framework */; };
 		5815E221203B69ED00F1EEEB /* LevelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815E220203B69ED00F1EEEB /* LevelTableViewCell.swift */; };
 		5815E224203B722E00F1EEEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5815E223203B722E00F1EEEB /* GoogleService-Info.plist */; };
+		582CDFCE2084975C00655CC7 /* levelup-title.png in Resources */ = {isa = PBXBuildFile; fileRef = 582CDFCD2084975C00655CC7 /* levelup-title.png */; };
 		58354D36202A6340008C3152 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58354D35202A6340008C3152 /* UserViewController.swift */; };
 		5849B9222063B0A800A3BF6B /* pacifico.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5849B9212063B0A800A3BF6B /* pacifico.otf */; };
 		585589ED205BDD5E00D8A5CC /* DetailLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585589EC205BDD5E00D8A5CC /* DetailLevelView.swift */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		5815E220203B69ED00F1EEEB /* LevelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableViewCell.swift; sourceTree = "<group>"; };
 		5815E223203B722E00F1EEEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		582CDFCD2084975C00655CC7 /* levelup-title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "levelup-title.png"; sourceTree = "<group>"; };
 		58354D35202A6340008C3152 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		5849B9212063B0A800A3BF6B /* pacifico.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pacifico.otf; sourceTree = "<group>"; };
 		585589EC205BDD5E00D8A5CC /* DetailLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLevelView.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				5815E223203B722E00F1EEEB /* GoogleService-Info.plist */,
+				582CDFCD2084975C00655CC7 /* levelup-title.png */,
 				58AE7DC4200BF1E700259273 /* AppDelegate.swift */,
 				5849B9212063B0A800A3BF6B /* pacifico.otf */,
 				58AE7DCB200BF1E700259273 /* Assets.xcassets */,
@@ -282,6 +285,7 @@
 				589CE7682035A1E700231119 /* LevelCell.xib in Resources */,
 				5815E224203B722E00F1EEEB /* GoogleService-Info.plist in Resources */,
 				5849B9222063B0A800A3BF6B /* pacifico.otf in Resources */,
+				582CDFCE2084975C00655CC7 /* levelup-title.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
